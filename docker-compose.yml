@@ -1,7 +1,7 @@
 version: "3.2"
 services:
   pictshare:
-    image: ./
+    build: .
     ports:
       - "8999:80"
     volumes:
@@ -9,4 +9,4 @@ services:
     environment:
       URL: 'http://localhost:8999/'
       MAX_UPLOAD_SIZE: 1024
-      ALLOWED_SUBNET: '192.168.0.0/24'
+      ALLOWED_SUBNET: '172.22.0.0/24'
